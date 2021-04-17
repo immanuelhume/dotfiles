@@ -21,6 +21,9 @@ antigen theme romkatv/powerlevel10k
 
 antigen apply
 
+fpath+=~/.zfunc # for completions scripts
+autoload -Uz compinit && compinit
+
 export EDITOR='code'
 export PROJECTS='~/Projects'
 export DOTFILES='~/dotfiles'
@@ -31,3 +34,4 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 unset LESS
 
 source ~/dotfiles/aliases.zsh
+source ~/dotfiles/path.zsh

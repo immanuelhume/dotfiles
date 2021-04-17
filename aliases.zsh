@@ -1,6 +1,5 @@
 # general shortcuts
 alias c='clear'
-alias reloadshell='source ~/.zshrc'
 alias path='echo -e ${PATH//:/"\n"}'
 mkcd()
 {
