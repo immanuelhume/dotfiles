@@ -18,7 +18,7 @@ npm install --global yarn
 
 # install poetry
 py=$(which python3 | which python)
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | $py -
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | $py - --no-modify-path
 
 # symlink .zshrc to $HOME
 rm -rf $HOME/.zshrc
