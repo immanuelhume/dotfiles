@@ -25,14 +25,22 @@ fpath+=~/.zfunc # for completions scripts
 autoload -Uz compinit && compinit
 
 export EDITOR='code'
-export PROJECTS="/Projects"
-export DOTFILES="~/dotfiles"
+export PYENV_ROOT=$HOME/.pyenv
+export PROJECTS=$HOME/Projects
+export DOTFILES=$HOME/dotfiles
+
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
 source "$HOME/.cargo/env"
 
 unset LESS
 
 source ~/dotfiles/aliases.zsh
 source ~/dotfiles/path.zsh
+
+# this block should be near the end, it manipulates PATH
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
