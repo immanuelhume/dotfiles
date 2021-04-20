@@ -10,6 +10,7 @@ killport()
     kill -9 $(lsof -t -i :$1)
 }
 alias codes='code --disable-gpu'
+alias codi='code-insiders'
 
 # directories
 alias proj='cd $PROJECTS'
