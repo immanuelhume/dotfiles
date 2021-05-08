@@ -24,11 +24,11 @@ antigen apply
 fpath+=~/.zfunc # for completions scripts
 autoload -Uz compinit && compinit
 
-export EDITOR='code'
+export EDITOR='vim'
 export PYENV_ROOT=$HOME/.pyenv
 export PROJECTS=$HOME/Projects
 export DOTFILES=$HOME/dotfiles
-
+export ANDROID_SDK=/home/junyi/Android/Sdk
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
