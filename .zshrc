@@ -40,7 +40,5 @@ unset LESS
 source ~/dotfiles/aliases.zsh
 source ~/dotfiles/path.zsh
 
-# this block should be near the end, it manipulates PATH
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
