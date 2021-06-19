@@ -1,6 +1,9 @@
 #! /usr/bin/sh
 set -e
 
+# install curl
+sudo apt install curl
+
 # install zsh
 sudo apt install zsh
 
@@ -19,12 +22,14 @@ cd ~/.pyenv && src/configure && make -C src
 py=$(which python | which python3)
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | $py - --no-modify-path
 
+# install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 # symlink .zshrc to $HOME
 rm -rf $HOME/.zshrc
 ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
 
-chsh -s $(which zsh) # switch to zsh now
-source $HOME/.zshrc # just to be safe
+zsh # run zsh
 
 # install node LTS
 if [[ "$(command -v nvm)" == "nvm" ]]; then
@@ -40,5 +45,5 @@ npm install --global yarn
 pyenv install 3.8.5
 pyenv global 3.8.5
 
-# install rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# change default shell to zsh (requires restart)
+chsh -s $(which zsh) 
