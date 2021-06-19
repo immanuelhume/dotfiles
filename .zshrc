@@ -15,6 +15,8 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
+antigen bundle docker
+antigen bundle docker-compose
 antigen bundle zsh-users/zsh-syntax-highlighting # must come as last bundle
 
 antigen theme romkatv/powerlevel10k
@@ -24,7 +26,7 @@ antigen apply
 fpath+=~/.zfunc # for completions scripts
 autoload -Uz compinit && compinit
 
-export EDITOR='vim'
+export EDITOR='nvim'
 export PYENV_ROOT=$HOME/.pyenv
 export PROJECTS=$HOME/Projects
 export DOTFILES=$HOME/dotfiles
