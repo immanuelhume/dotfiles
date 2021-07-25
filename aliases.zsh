@@ -1,4 +1,4 @@
-# general shortcuts
+# utility stuff
 alias c='clear'
 alias path='echo -e ${PATH//:/"\n"}'
 mkcd()
@@ -9,9 +9,9 @@ killport()
 {
     kill -9 $(lsof -t -i :$1)
 }
-alias codes='code --disable-gpu'
-alias codi='code-insiders'
 
-# directories
-alias proj='cd $PROJECTS'
-alias dot='cd $DOTFILES'
+# git
+alias gacan='git add : && git commit --amend --no-edit'
+
+# golang
+alias ggo='go run *.go'
