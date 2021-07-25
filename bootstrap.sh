@@ -35,5 +35,8 @@ npm install --global yarn
 pyenv install 3.8.5
 pyenv global 3.8.5
 
+# ln vimfiles
+ln -s $HOME/dotfiles/vimfiles $HOME/.vim/vimfiles
+
 # change default shell to zsh (requires restart)
 chsh -s $(which zsh) 
