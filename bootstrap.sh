@@ -37,6 +37,9 @@ pyenv global 3.8.5
 
 # ln vimfiles
 ln -s $HOME/dotfiles/vimfiles $HOME/.vim/vimfiles
+# and install vim plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # change default shell to zsh (requires restart)
 chsh -s $(which zsh) 
