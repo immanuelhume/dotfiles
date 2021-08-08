@@ -93,7 +93,7 @@
   },
   "workbench.startupEditor": "newUntitledFile",
   "editor.suggestSelection": "first",
-  "workbench.colorTheme": "chalice-color-theme-dark",
+  "workbench.colorTheme": "Alabaster",
   "material-ui-snippets.showNotesOnStartup": false,
   "latex-workshop.view.pdf.viewer": "tab",
   "[dart]": {
@@ -105,5 +105,6 @@
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false,
     "editor.defaultFormatter": "Dart-Code.dart-code"
-  }
+  },
+  "go.toolsManagement.autoUpdate": true
 }
