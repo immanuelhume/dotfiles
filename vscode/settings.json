@@ -15,7 +15,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.fontFamily": "mononoki nerd font, monospace",
-  "editor.fontSize": 16,
+  "editor.fontSize": 15,
   "editor.fontLigatures": false,
   "editor.quickSuggestions": {
     "strings": true
@@ -95,6 +95,19 @@
   "editor.suggestSelection": "first",
   "material-ui-snippets.showNotesOnStartup": false,
   "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-xelatex",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    }
+  ],
   "[dart]": {
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
@@ -105,6 +118,10 @@
     "editor.wordBasedSuggestions": false,
     "editor.defaultFormatter": "Dart-Code.dart-code"
   },
+  "[sql]": {
+    "editor.defaultFormatter": "mtxr.sqltools"
+  },
   "go.toolsManagement.autoUpdate": true,
-  "workbench.colorTheme": "Alabaster"
+  "workbench.colorTheme": "papercolor-vscode-light",
+  "window.zoomLevel": 1
 }
