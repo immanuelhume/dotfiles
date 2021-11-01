@@ -9,19 +9,11 @@ local key_mapper = function(mode, key, result)
 	)
 end
 
-local function t(str)
-    return vim.api.nvim_replace_termcodes(str, true, true, true)
-end
-
-function _G.smart_tab()
-    return vim.fn.pumvisible() == 1 and t'<C-n>' or t'<Tab>'
-end
-
 -- exit insert mode by pressing j-j
 key_mapper('i', 'jj', '<Esc>')
 
 -- telescope
-key_mapper('n', '<C-p>', ':lua require"telescope.builtin".find_files()<CR>')
+key_mapper('n', '<C-p>', ':lua require"telescope.builtin".find_files({hidden=true})<CR>')
 key_mapper('n', '<leader>fs', ':lua require"telescope.builtin".live_grep()<CR>')
 key_mapper('n', '<leader>fh', ':lua require"telescope.builtin".help_tags()<CR>')
 key_mapper('n', '<leader>fb', ':lua require"telescope.builtin".buffers()<CR>')
@@ -38,3 +30,6 @@ key_mapper('n', 'K', ':lua vim.lsp.buf.hover()<CR>')
 key_mapper('n', '<c-k>', ':lua vim.lsp.buf.signature_help()<CR>')
 key_mapper('n', '<leader>af', ':lua vim.lsp.buf.code_action()<CR>')
 key_mapper('n', '<leader>rn', ':lua vim.lsp.buf.rename()<CR>')
+
+-- Trouble
+key_mapper('n', '<leader>xx', '<cmd>TroubleToggle<cr>')

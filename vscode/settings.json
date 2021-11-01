@@ -62,7 +62,7 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.python"
   },
-  "python.formatting.provider": "autopep8",
+  "python.formatting.provider": "black",
   "python.formatting.autopep8Args": ["--ignore=E402,E501"],
   "python.linting.enabled": true,
   "python.linting.flake8Enabled": true,
@@ -123,5 +123,6 @@
   },
   "go.toolsManagement.autoUpdate": true,
   "workbench.colorTheme": "papercolor-vscode-light",
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "python.pythonPath": "/home/junyi/.pyenv/versions/3.8.5/bin/python"
 }

@@ -11,3 +11,8 @@ configs.setup {
 		enable = true,
 	}
 }
+
+-- lualine
+require'lualine'.setup({
+		theme = 'PaperColor',
+	})

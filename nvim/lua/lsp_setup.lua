@@ -1,6 +1,15 @@
 local lspconfig = require'lspconfig'
 USER = vim.fn.expand('$USER')
 
+-- for servers which don't require any special configurations
+lspconfig.bashls.setup{}
+
+-- pyright
+local pyright_bin = "/home/" .. USER .. "/.local/share/nvim/lspinstall/python/node_modules/.bin/pyright-langserver"
+lspconfig.pyright.setup {
+  cmd = {pyright_bin, "--stdio"}
+}
+
 -- sumneko
 local sumneko_root = "/home/" .. USER .. "/.local/share/nvim/lspinstall/lua/sumneko-lua/extension/server"
 local sumneko_binary = "/home/" .. USER .. "/.local/share/nvim/lspinstall/lua/sumneko-lua/extension/server/bin/Linux/lua-language-server"
