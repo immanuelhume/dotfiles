@@ -1,8 +1,8 @@
 local use = require'packer'.use
 
 require('packer').startup(function()
-  -- theme
-  use 'NLKNguyen/papercolor-theme'
+  -- look
+  use { 'NLKNguyen/papercolor-theme', }
   use { 'nvim-lualine/lualine.nvim',
     requires = 'kyazdani42/nvim-web-devicons',
   }
@@ -34,5 +34,10 @@ require('packer').startup(function()
   use 'nvim-lua/plenary.nvim'
   use 'nvim-lua/telescope.nvim'
   use 'jremmen/vim-ripgrep'
+
+  -- file explorer
+  use { 'kyazdani42/nvim-tree.lua',
+  requires = 'kyazdani42/nvim-web-devicons',
+  }
 end
 )

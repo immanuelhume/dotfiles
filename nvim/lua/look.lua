@@ -1,4 +1,4 @@
-vim.o.bg = 'light'
+vim.o.bg = 'dark'
 vim.g.colors_name = 'PaperColor'
 vim.o.termguicolors = true
 vim.o.syntax = 'on'
@@ -15,4 +15,7 @@ configs.setup {
 -- lualine
 require'lualine'.setup({
 		theme = 'PaperColor',
-	})
+})
+
+-- set up nvim tree
+require('tree_setup')
