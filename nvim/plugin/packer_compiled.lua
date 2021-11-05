@@ -71,68 +71,89 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   LuaSnip = {
     loaded = true,
-    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/LuaSnip"
+    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
+    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   cmp_luasnip = {
     loaded = true,
-    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/cmp_luasnip"
+    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["lualine.nvim"] = {
     loaded = true,
-    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/lualine.nvim"
+    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
-    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/nvim-cmp"
+    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-lspinstall"] = {
     loaded = true,
-    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
+    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/nvim-lspinstall",
+    url = "https://github.com/kabouzeid/nvim-lspinstall"
+  },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["papercolor-theme"] = {
     loaded = true,
-    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/papercolor-theme"
+    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/papercolor-theme",
+    url = "https://github.com/NLKNguyen/papercolor-theme"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-lua/telescope.nvim"
   },
   ["trouble.nvim"] = {
     config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ftrouble\frequire\0" },
     loaded = true,
-    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/trouble.nvim"
+    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
   },
   ["vim-polyglot"] = {
     loaded = true,
-    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/vim-polyglot"
+    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/vim-polyglot",
+    url = "https://github.com/sheerun/vim-polyglot"
   },
   ["vim-ripgrep"] = {
     loaded = true,
-    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/vim-ripgrep"
+    path = "/home/junyi/.local/share/nvim/site/pack/packer/start/vim-ripgrep",
+    url = "https://github.com/jremmen/vim-ripgrep"
   }
 }
 
