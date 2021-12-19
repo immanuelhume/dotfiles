@@ -14,7 +14,7 @@
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "editor.fontFamily": "mononoki nerd font, monospace",
+  "editor.fontFamily": "iosevka nerd font mono, mononoki nerd font, monospace",
   "editor.fontSize": 15,
   "editor.fontLigatures": false,
   "editor.quickSuggestions": {
@@ -121,8 +121,23 @@
   "[sql]": {
     "editor.defaultFormatter": "mtxr.sqltools"
   },
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform"
+  },
+  "[yaml]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "keep",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    }
+  },
   "go.toolsManagement.autoUpdate": true,
-  "workbench.colorTheme": "papercolor-vscode-light",
-  "window.zoomLevel": 1,
-  "python.pythonPath": "/home/junyi/.pyenv/versions/3.8.5/bin/python"
+  "workbench.colorTheme": "papercolor-vscode-dark",
+  "python.pythonPath": "/home/junyi/.pyenv/versions/3.8.5/bin/python",
+  "glassit.alpha": 240,
+  "redhat.telemetry.enabled": true,
+  "explorer.confirmDelete": false
 }

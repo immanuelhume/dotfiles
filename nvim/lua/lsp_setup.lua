@@ -3,6 +3,7 @@ USER = vim.fn.expand('$USER')
 
 -- for servers which don't require any special configurations
 lspconfig.bashls.setup{}
+lspconfig.tsserver.setup{}
 
 -- pyright
 local pyright_bin = "/home/" .. USER .. "/.local/share/nvim/lspinstall/python/node_modules/.bin/pyright-langserver"
