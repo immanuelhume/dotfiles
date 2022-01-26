@@ -1,15 +1,12 @@
 local fn = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-end
 local use = require'packer'.use
 
 require('packer').startup(function()
   -- look
-  use { 'NLKNguyen/papercolor-theme', }
+  use 'NLKNguyen/papercolor-theme'
+  use 'davidosomething/vim-colors-meh'
   use { 'nvim-lualine/lualine.nvim',
-    requires = 'kyazdani42/nvim-web-devicons',
+  requires = 'kyazdani42/nvim-web-devicons',
   }
 
   -- lsp, completion, and syntax highlighting
@@ -23,15 +20,15 @@ require('packer').startup(function()
   use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
   use {
-  "folke/trouble.nvim",
-  requires = "kyazdani42/nvim-web-devicons",
-  config = function()
-    require("trouble").setup {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
-  end
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
   }
 
   -- fuzzy finding
@@ -44,9 +41,12 @@ require('packer').startup(function()
   use { 'kyazdani42/nvim-tree.lua',
   requires = 'kyazdani42/nvim-web-devicons',
   }
-
-  if packer_bootstrap then
-    require('packer').sync()
-  end
 end
 )
+
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+  augroup end
+]])

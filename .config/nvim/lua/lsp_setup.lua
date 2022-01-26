@@ -5,6 +5,10 @@ USER = vim.fn.expand('$USER')
 lspconfig.bashls.setup{}
 lspconfig.tsserver.setup{}
 
+local on_attach = function(client)
+    require'completion'.on_attach(client)
+end
+
 -- pyright
 local pyright_bin = "/home/" .. USER .. "/.local/share/nvim/lspinstall/python/node_modules/.bin/pyright-langserver"
 lspconfig.pyright.setup {
@@ -70,3 +74,22 @@ function Goimports(timeout_ms)
 
 vim.api.nvim_command('autocmd BufWritePre *.go lua Goimports(1000)')
 vim.api.nvim_command('autocmd BufWritePre *.go lua vim.lsp.buf.formatting()')
+
+-- Rust Analyzer
+lspconfig.rust_analyzer.setup({
+    on_attach=on_attach,
+    settings = {
+        ["rust-analyzer"] = {
+            assist = {
+                importGranularity = "module",
+                importPrefix = "by_self",
+            },
+            cargo = {
+                loadOutDirsFromCheck = true
+            },
+            procMacro = {
+                enable = true
+            },
+        }
+    }
+})

@@ -1,6 +1,5 @@
 local g = vim.g
 
-g.nvim_tree_gitignore = 1
 g.nvim_tree_git_hl = 1 -- 0 by default, will enable file highlight for git attributes (can be used without the icons).
 g.nvim_tree_add_trailing = 1 -- 0 by default, append a trailing slash to folder names
 g.nvim_tree_width = 24
@@ -9,8 +8,6 @@ vim.cmd('nnoremap <C-n> :NvimTreeToggle<CR>')
 vim.cmd('nnoremap <leader>r :NvimTreeRefresh<CR>')
 vim.cmd('nnoremap <leader>n :NvimTreeFindFile<CR>')
 -- NvimTreeOpen, NvimTreeClose, NvimTreeFocus, NvimTreeFindFileToggle, and NvimTreeResize are also available if you need them
-
-vim.cmd('highlight NvimTreeFolderIcon guibg=blue')
 
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
@@ -49,6 +46,11 @@ require'nvim-tree'.setup {
     dotfiles = false,
     custom = {}
   },
+  git = {
+    enable = true,
+    ignore = true,
+    timeout = 500,
+  },
   view = {
     width = 30,
     height = 30,
@@ -58,7 +60,14 @@ require'nvim-tree'.setup {
     mappings = {
       custom_only = false,
       list = {}
-    }
+    },
+    number = false,
+    relativenumber = false,
+    signcolumn = "yes"
+  },
+  trash = {
+    cmd = "trash",
+    require_confirm = true
   }
 }
 

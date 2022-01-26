@@ -1,3 +1,4 @@
+" This sets transparency for vim
 hi Normal guibg=none ctermbg=none
 hi LineNr guibg=none ctermbg=none
 hi Folded guibg=none ctermbg=none

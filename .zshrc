@@ -14,10 +14,11 @@ antigen theme candy
 
 antigen apply
 
-fpath+=~/.zfunc # for completions scripts
+# For completions scripts.
+fpath+=~/.zfunc 
 autoload -Uz compinit && compinit
 
-source ~/dotfiles/exports.zsh
+source ~/dotfiles/vars.zsh
 source ~/dotfiles/aliases.zsh
 source ~/dotfiles/path.zsh
 
@@ -36,3 +37,4 @@ PERL_MM_OPT="INSTALL_BASE=/home/junyi/perl5"; export PERL_MM_OPT;
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
+

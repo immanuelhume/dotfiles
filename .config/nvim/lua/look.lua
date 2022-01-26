@@ -1,5 +1,5 @@
 vim.o.bg = 'dark'
-vim.g.colors_name = 'PaperColor'
+vim.cmd('colorscheme meh')
 vim.o.termguicolors = true
 vim.o.syntax = 'on'
 
@@ -14,7 +14,6 @@ configs.setup {
 
 -- lualine
 require'lualine'.setup({
-		theme = 'PaperColor',
 })
 
 -- set up nvim tree
