@@ -11,15 +11,15 @@ an executable
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
-lvim.colorscheme = "gruvbox"
+lvim.colorscheme = "photon"
 vim.opt.relativenumber = true
 vim.opt.timeoutlen =  200
 lvim.transparent_window = true
 vim.opt.cindent = true
 
 -- vim-pandoc settings
-vim.api.nvim_set_var("pandoc#formatting#mode", "ha")
-vim.api.nvim_set_var("pandoc#modules#disabled", {"folding"})
+vim.api.nvim_set_var("pandoc#formatting#mode", "ha") -- hard line wrapping
+vim.api.nvim_set_var("pandoc#modules#disabled", {""}) -- add stuff here to disable them
 
 -- vimtex settings
 vim.api.nvim_set_var("vimtex_view_method", "zathura")
@@ -87,9 +87,9 @@ lvim.builtin.treesitter.ensure_installed = {
   "rust",
   "java",
   "yaml",
+  "go",
 }
 
-lvim.builtin.treesitter.ignore_install = { "haskell" }
 lvim.builtin.treesitter.highlight.enabled = true
 
 -- generic LSP settings
@@ -144,16 +144,20 @@ formatters.setup {
 
 -- Additional Plugins
 lvim.plugins = {
-    {"davidosomething/vim-colors-meh"},
-    {"morhetz/gruvbox"},
-    {
-      "folke/trouble.nvim",
-      cmd = "TroubleToggle",
-    },
-    {"vim-pandoc/vim-pandoc"},
-    {"vim-pandoc/vim-pandoc-syntax"},
-    {"dhruvasagar/vim-table-mode"},
-    {"lervag/vimtex"},
+  {"folke/tokyonight.nvim"},
+  {"morhetz/gruvbox"},
+  {"shaunsingh/nord.nvim"},
+  {"jnurmine/Zenburn"},
+  {"junegunn/seoul256.vim"},
+  {"axvr/photon.vim"},
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+  },
+  {"vim-pandoc/vim-pandoc"},
+  {"vim-pandoc/vim-pandoc-syntax"},
+  {"dhruvasagar/vim-table-mode"},
+  {"lervag/vimtex"},
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
@@ -163,3 +167,4 @@ lvim.plugins = {
 
 -- Source snippets.
 require("snippets")
+
