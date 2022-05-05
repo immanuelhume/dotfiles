@@ -1,0 +1,19 @@
+# i3 config file (v4)
+
+# Start XDG autostart .desktop files using dex. See also
+# https://wiki.archlinux.org/index.php/XDG_Autostart
+exec --no-startup-id dex --autostart --environment i3
+
+# NetworkManager is the most popular way to manage wireless networks on Linux,
+# and nm-applet is a desktop environment-independent system tray GUI for it.
+exec --no-startup-id nm-applet
+
+exec --no-startup-id redshift
+
+# auth with polkit-gnome
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+# picom
+exec --no-startup-id /usr/bin/picom --config /home/junyi/.config/picom/picom.conf --experimental-backends
+exec --no-startup-id /usr/bin/feh --bg-fill /home/junyi/Pictures/ign_endeavour2.png
+

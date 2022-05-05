@@ -1,0 +1,12 @@
+[Unit]
+Description = Lock the screen on suspend or sleep
+Before=suspend.target sleep.target
+
+[Service]
+User=%i
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/home/%i/.config/i3/scripts/blur-lock
+
+[Install]
+WantedBy=suspend.target sleep.target

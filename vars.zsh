@@ -5,5 +5,5 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 export GOPATH=$HOME/go
 export PIP_REQUIRE_VIRTUALENV=true
 
-export XDG_SESSION_TYPE=wayland
-export XDG_CURRENT_DESKTOP=sway
+#export XDG_SESSION_TYPE=wayland
+#export XDG_CURRENT_DESKTOP=sway

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# Script from https://github.com/endeavouros-team/endeavouros-i3wm-setup/blob/main/.config/i3/scripts/blur-lock
+
+if pgrep -x "i3" > /dev/null
+then
+  PICTURE=/tmp/i3lock.png
+  SCREENSHOT="scrot -z $PICTURE"
+
+  BLUR="5x4"
+
+  $SCREENSHOT
+  convert $PICTURE -blur $BLUR $PICTURE
+  i3lock -i $PICTURE
+  rm $PICTURE
+fi

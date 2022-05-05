@@ -15,7 +15,6 @@ lvim.colorscheme = "photon"
 vim.opt.relativenumber = true
 vim.opt.timeoutlen =  200
 lvim.transparent_window = true
-vim.opt.cindent = true
 
 -- vim-pandoc settings
 vim.api.nvim_set_var("pandoc#formatting#mode", "ha") -- hard line wrapping
@@ -91,6 +90,10 @@ lvim.builtin.treesitter.ensure_installed = {
 }
 
 lvim.builtin.treesitter.highlight.enabled = true
+lvim.builtin.treesitter.indent = {
+  enable = true,
+  disable = { "go" },
+}
 
 -- generic LSP settings
 
@@ -161,9 +164,6 @@ lvim.plugins = {
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
--- lvim.autocommands.custom_groups = {
---   { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
--- }
 
 -- Source snippets.
 require("snippets")

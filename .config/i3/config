@@ -1,0 +1,4 @@
+# i3 config file (v4)
+
+include ~/.config/i3/config.d/*
+
